@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # ----
 # REMOVE SAVED WPA2 ENTERPRISE WIRELESS NETWORKS
-# v2.2 | github.com/geoffrepoli
+# v2.3 | forked from github.com/geoffrepoli
+# Modified by Dave Trumbull
 # ----
 # Removes SSID(s) from preferred network list & removes saved login credentials from each console user's keychain
 # Note: must be run as root
@@ -10,7 +11,8 @@
 
 # CONFIGURATION
 # Add SSIDs to be removed in the following array, using the same formatting as the example networks:
-wirelessNetworks=( "wireless1" "wireless2" "wireless3" )
+# Use JAMF Parameter 4
+wirelessNetworks=( "$4" )
 
 # ------------
 
